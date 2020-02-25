@@ -9,6 +9,7 @@ const Candidates = (props) => {
 	}, [])
 
 	if (!candidates) return null
+	console.log(candidates)
 	return (
 		<Grid columns={5}>
 			{candidates.map((cand) => (

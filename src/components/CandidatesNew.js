@@ -48,12 +48,7 @@ const CandidatesNew = (props) => {
 
 			<Form.Field>
 				<label>Age</label>
-				<Input
-					onChange={handleChange}
-					placeholder="Age"
-					name="yearEstablished"
-					value={candData.age}
-				/>
+				<Input onChange={handleChange} placeholder="Age" name="age" value={candData.age} />
 			</Form.Field>
 
 			<Form.Field>

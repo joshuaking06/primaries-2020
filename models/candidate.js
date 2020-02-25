@@ -6,7 +6,7 @@ const candidateSchema = new mongoose.Schema({
 	delegates: { type: Number, required: true },
 	totalVotes: { type: Number, required: true },
 	color: { type: String, required: true },
-	focuses: [ { type: String, required: true } ],
+	views: { type: String, required: true },
 	age: { type: Number, required: true },
 	image: { type: String }
 })

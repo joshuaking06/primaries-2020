@@ -7,6 +7,7 @@ import CandidatesNew from './components/CandidatesNew'
 import Home from './components/Home'
 
 import 'semantic-ui-css/semantic.min.css'
+import './style.scss'
 
 const App = (props) => {
 	return (

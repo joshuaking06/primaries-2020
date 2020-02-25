@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import { Link } from 'react-router-dom'
 import axios from 'axios'
 import { Divider, Container, Image, Table, Header } from 'semantic-ui-react'
 
@@ -26,17 +27,19 @@ const Candidates = (props) => {
 
 				<Table.Body>
 					{candidates.map((cand) => (
-						<Table.Row>
+						<Table.Row key={cand._id}>
 							<Table.Cell>
-								<Header as="h4" image>
-									<Image src={cand.image} rounded size="mini" />
-									<Header.Content>
-										{cand.name}
-										<Header.Subheader>
-											{cand.totalVotes}% of Popular Vote
-										</Header.Subheader>
-									</Header.Content>
-								</Header>
+								<Link to={`/candidates/${cand._id}`}>
+									<Header as="h4" image>
+										<Image src={cand.image} rounded size="mini" />
+										<Header.Content>
+											{cand.name}
+											<Header.Subheader>
+												{cand.totalVotes}% of Popular Vote
+											</Header.Subheader>
+										</Header.Content>
+									</Header>
+								</Link>
 							</Table.Cell>
 							<Table.Cell>{cand.delegates || 0}</Table.Cell>
 						</Table.Row>

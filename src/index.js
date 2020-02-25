@@ -4,6 +4,7 @@ import { Link, BrowserRouter, Route, Switch } from 'react-router-dom'
 import { Menu, Container, Grid } from 'semantic-ui-react'
 import Candidates from './components/Candidates'
 import CandidatesNew from './components/CandidatesNew'
+import CandidatesShow from './components/CandidatesShow'
 import Home from './components/Home'
 
 import 'semantic-ui-css/semantic.min.css'
@@ -28,6 +29,7 @@ const App = (props) => {
 				</Menu>
 
 				<Switch>
+					<Route path="/candidates/:id" component={CandidatesShow} />
 					<Route path="/candidates/new" component={CandidatesNew} />
 					<Route path="/candidates" component={Candidates} />
 					<Route path="/" component={Home} />
